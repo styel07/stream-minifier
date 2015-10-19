@@ -1,1 +1,1 @@
-# stream-minifier
+# Stream Minifier
