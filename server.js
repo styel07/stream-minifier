@@ -1,19 +1,25 @@
 var fs = require('fs');
-var util = require('util');
+var data = require('test.html') ;
 
-function minify() {
-  fs.readFile('test.html', function(error, contentsOfFile) {
+Readable = require('stream').Readable;
 
+// read incoming input stream
+var ReadStream = function() {
+  Readable.call(this, { objectMode : true });
+  this.data = data;
+  this.curIndex = 0;
+};
 
-  });
+// transform stream
 
-  // transform stream
+// write stream
+fs.writeFile('./min/', 'test.html', function(err) {
+  if (err) {
+    throw err;
+  } else {
+    console.log('success');
+  }
+});
 
-  fs.writeFile('./min/', 'test.html', function(err) {
-    if (err) {
-      throw err;
-    } else {
-      console.log('success');
-    }
-  });
-}
+// pipe them together
+//read.pipe(transform).pipe(write);

@@ -1,4 +1,5 @@
 # Stream Minifier
+Replicating how Gulp & minify works using Read, Transform and Write streams.
 
 ##Problem
 Help a bruddah out
