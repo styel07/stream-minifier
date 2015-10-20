@@ -1,5 +1,5 @@
 var fs = require('fs');
-var data = require('test.html') ;
+//var data = require('test.html') ;
 
 Readable = require('stream').Readable;
 
